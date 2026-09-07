@@ -15,11 +15,7 @@
             --accent-color: #e63946;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,28 +31,17 @@
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+        header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        header p {
+            font-size: 1.15rem;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            margin: 10px auto 0;
+            line-height: 1.5;
         }
 
-header p {
-    font-size: 1.2rem;
-    color: #ffffff;
-    font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    max-width: 800px;
-    margin: 10px auto 0;
-    line-height: 1.5;
-}
-
-        main {
-            max-width: 900px;
-            margin: -30px auto 40px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 1;
-        }
+        main { max-width: 900px; margin: -30px auto 40px; padding: 0 20px; position: relative; z-index: 1; }
 
         .card {
             background: var(--card-bg);
@@ -75,16 +60,7 @@ header p {
             display: inline-block;
         }
 
-        h3 {
-            color: var(--primary-color);
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: var(--text-light);
-        }
+        p { margin-bottom: 15px; color: var(--text-light); }
 
         .highlight-box {
             background-color: #eef7ff;
@@ -94,80 +70,64 @@ header p {
             border-radius: 0 8px 8px 0;
         }
 
-        .benefits-grid {
+        .benefits-grid, .criteria-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
-        .benefit-card {
+        .benefit-card, .criterion-card {
             background: #fafafa;
             border: 1px solid #e0e0e0;
             border-radius: 10px;
             padding: 20px;
             transition: transform 0.2s;
         }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .benefit-card .icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .benefit-card h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .criteria-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .criterion-card {
-            background: #fff;
-            border: 2px solid var(--secondary-color);
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-        }
-
+        .criterion-card { background: #fff; border: 2px solid var(--secondary-color); text-align: center; }
         .criterion-card .num {
-            background: var(--secondary-color);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 10px;
+            background: var(--secondary-color); color: white; width: 30px; height: 30px;
+            border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+            font-weight: bold; margin-bottom: 10px;
         }
+
+        .benefit-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .benefit-card .icon { font-size: 2rem; margin-bottom: 10px; }
+        .benefit-card h4 { color: var(--primary-color); margin-bottom: 10px; font-size: 1.1rem; }
 
         .warning {
-            background-color: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 15px 20px;
-            border-radius: 0 8px 8px 0;
-            margin-top: 20px;
+            background-color: #fff3cd; border-left: 5px solid #ffc107;
+            padding: 15px 20px; border-radius: 0 8px 8px 0; margin-top: 20px;
+        }
+
+        /* NOU: Estils per als botons de descàrrega */
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px dashed #ccc;
+        }
+        .btn-download {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-download:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9rem;
-            border-top: 1px solid #ddd;
-            margin-top: 40px;
+            text-align: center; padding: 20px; color: #777; font-size: 0.9rem;
+            border-top: 1px solid #ddd; margin-top: 40px;
         }
 
         @media (max-width: 600px) {
@@ -193,39 +153,23 @@ header p {
         <section class="card">
             <h2>👥 A qui va dirigida?</h2>
             <p>La Llei s'aplica a dos grans grups de persones:</p>
-            
             <div class="highlight-box">
                 <strong>1. Persones amb ELA (Esclerosi Lateral Amiotròfica):</strong><br>
                 S'aplica de forma <strong>automàtica i directa</strong> a totes les persones diagnosticades amb ELA des del moment del diagnòstic.
             </div>
-
             <p style="margin-top: 20px;"><strong>2. Persones amb ALTRES malalties d'alta complexitat:</strong><br>
-            Per a la resta de malalties (neurològiques o no), la Llei s'aplica si es compleixen <strong>simultàniament</strong> aquests 4 requisits:</p>
-            
+            Per a la resta de malalties, la Llei s'aplica si es compleixen <strong>simultàniament</strong> aquests 4 requisits:</p>
             <div class="criteria-grid">
-                <div class="criterion-card">
-                    <div class="num">1</div>
-                    <p><strong>Irreversible</strong> i amb reducció significativa de l'esperança de vida.</p>
-                </div>
-                <div class="criterion-card">
-                    <div class="num">2</div>
-                    <p><strong>Sense tractament</strong> efectiu que millori el curs de la malaltia.</p>
-                </div>
-                <div class="criterion-card">
-                    <div class="num">3</div>
-                    <p>Requereix <strong>cures complexes</strong> a casa amb gran impacte familiar.</p>
-                </div>
-                <div class="criterion-card">
-                    <div class="num">4</div>
-                    <p>Progressió <strong>molt ràpida</strong> que exigeixi tràmits d'urgència.</p>
-                </div>
+                <div class="criterion-card"><div class="num">1</div><p><strong>Irreversible</strong> i amb reducció significativa de l'esperança de vida.</p></div>
+                <div class="criterion-card"><div class="num">2</div><p><strong>Sense tractament</strong> efectiu que millori el curs de la malaltia.</p></div>
+                <div class="criterion-card"><div class="num">3</div><p>Requereix <strong>cures complexes</strong> a casa amb gran impacte familiar.</p></div>
+                <div class="criterion-card"><div class="num">4</div><p>Progressió <strong>molt ràpida</strong> que exigeixi tràmits d'urgència.</p></div>
             </div>
         </section>
 
         <section class="card">
-            <h2>🚀 Quins drets i millores concedes?</h2>
+            <h2>🚀 Quins drets i millores concedeix?</h2>
             <p>Aquesta Llei introdueix canvis molt importants en diferents àmbits per protegir el pacient i el seu entorn:</p>
-            
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="icon">⏱️</div>
@@ -235,17 +179,17 @@ header p {
                 <div class="benefit-card">
                     <div class="icon">🏠</div>
                     <h4>Cures i Atenció 24h</h4>
-                    <p>S'adapten els serveis d'ajuda a domicili i assistència personal. Es garanteix una <strong>supervisió i atenció continuada 24 hores</strong> per a fases avançades, per evitar morts evitables per problemes respiratoris o de disfàgia.</p>
+                    <p>S'adapten els serveis d'ajuda a domicili. Es garanteix una <strong>supervisió i atenció continuada 24 hores</strong> per a fases avançades, per evitar morts evitables per problemes respiratoris o de disfàgia.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">🤝</div>
                     <h4>Protecció als Cuidadors</h4>
-                    <p>Les famílies que deixen la seva feina per cuidar un familiar amb gran dependència (Grau III) poden <strong>millorar la seva cotització</strong> a la Seguretat Social (l'Estat en paga el 50%). A més, són <strong>col·lectiu prioritari</strong> per tornar al mercat laboral.</p>
+                    <p>Les famílies que deixen la seva feina per cuidar un familiar amb gran dependència poden <strong>millorar la seva cotització</strong> a la Seguretat Social (l'Estat en paga el 50%). A més, són <strong>col·lectiu prioritari</strong> per tornar al mercat laboral.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="icon">⚡</div>
                     <h4>Electrodependència</h4>
-                    <p>Les persones que necessiten màquines connectades a la llum per viure (electrodependents) tenen dret al <strong>Bo Social Elèctric</strong>. A més, s'estudiarà prohibir els talls de subministrament i obligar a avisar amb antelació de qualsevol tall programat.</p>
+                    <p>Les persones que necessiten màquines connectades a la llum per viure tenen dret al <strong>Bo Social Elèctric</strong>. A més, s'estudiarà prohibir els talls de subministrament i obligar a avisar amb antelació de qualsevol tall programat.</p>
                 </div>
             </div>
         </section>
@@ -256,15 +200,23 @@ header p {
             <ul style="margin-left: 20px; color: var(--text-light); margin-bottom: 15px;">
                 <li><strong>Fisioteràpia a domicili:</strong> S'incorpora a la cartera de serveis per a malalts que no es poden desplaçar.</li>
                 <li><strong>Registre Estatal:</strong> Es crea un registre de malalties neurodegeneratives per conèixer millor aquestes patologies a Espanya.</li>
-                <li><strong>Formació:</strong> Es reforçarà la formació dels professionals sanitaris i dels cuidadors professionals per atendre aquestes malalties complexes.</li>
-                <li><strong>Desplaçaments:</strong> Es buscarà homogeneïtzar les ajudes per a despeses de viatge i allotjament quan un pacient hagi de ser derivat a una altra comunitat autònoma per rebre tractament.</li>
+                <li><strong>Formació:</strong> Es reforçarà la formació dels professionals sanitaris i dels cuidadors professionals.</li>
+                <li><strong>Desplaçaments:</strong> Es buscarà homogeneïtzar les ajudes per a despeses de viatge i allotjament quan un pacient hagi de ser derivat a una altra comunitat autònoma.</li>
             </ul>
         </section>
 
         <section class="card">
             <h2>💡 Un naixement per consens</h2>
-            <p>És important destacar que aquesta Llei no va néixer als despatxos, sinó que és fruit d'una <strong>proposta de la Confederació Nacional d'Entitats AmbELA</strong>. Va comptar amb el suport i consens de tots els grups parlamentaris (Popular, Junts, Socialista i Sumar), representant un exemple de com la societat civil i la política poden unir-se per protegir els més vulnerables.</p>
+            <p>És important destacar que aquesta Llei no va néixer als despatxos, sinó que és fruit d'una <strong>proposta de la Confederació Nacional d'Entitats AmbELA</strong>. Va comptar amb el suport i consens de tots els grups parlamentaris, representant un exemple de com la societat civil i la política poden unir-se per protegir els més vulnerables.</p>
         </section>
+
+        <!-- NOU: Secció de descàrrega -->
+        <div class="download-section">
+            <a href="https://acampacatalunya.github.io/boe32024/BOE-A-2024-22438-C.pdf" target="_blank" class="btn-download">
+                📥 Descarregar la Llei 3/2024 original (PDF)
+            </a>
+        </div>
+
     </main>
 
     <footer>
